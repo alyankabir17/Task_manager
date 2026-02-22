@@ -19,7 +19,7 @@ pipeline {
         echo 'Checking for HTML syntax errors...'
         // This command looks for the closing body tag. 
         // If it is missing, the command fails and the build turns RED.
-        sh 'grep "</body>" index.html' 
+        sh 'tidy -e index.html'
     }
 }
     }
