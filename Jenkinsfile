@@ -11,6 +11,8 @@ pipeline {
         stage('Quality Check') {
             steps {
                 echo 'Checking HTML structure...'
+                sh 'cat index.html'
+                echo ' checking HTML structure.....'
                 sh 'grep -i "Task Manager" index.html'
             }
         }
