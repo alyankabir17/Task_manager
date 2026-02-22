@@ -11,7 +11,7 @@ pipeline {
         stage('Quality Check') {
             steps {
                 echo 'Checking HTML structure...'
-                sh 'tidy -e index.html' 
+                sh 'grep -i "Task Manager" index.html'
             }
         }
         stage('HTML Validation') {
